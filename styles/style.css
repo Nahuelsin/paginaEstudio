@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Boldonse&family=DM+Serif+Text:ital@0;1&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Syne:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+}
+
+body{
+    background: #fbe0cc;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    position: sticky;
+    top:0;
+    z-index: 3;
+}
+
+hr {
+    background-color: #100f0e;
+    margin-block: 50px;
+    padding: 5px;
+}
+.navegador{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.menu { 
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: #ffc0ca;
+    list-style-type: none;
+    gap: 10px;
+}
+
+.menu li {
+    height: 100%;
+    font-family: "Boldonse", system-ui;
+    font-size: 15px;
+}
+
+.menu li a {
+    padding: 20px;
+    display: flex;
+    color: #100f0e;
+    text-decoration: none;
+    
+}
+
+.menu li a:hover, 
+.menu_item.active a{
+    border-radius: 100px;
+    background-size: 100%;
+    background-color: #9b5d66;
+    color: rgb(251, 199, 199);  
+    transition: background-color 0.8s ease;
+}
+
+
+
+
+main {
+    padding: 2%;
+}
+button {
+    font-family: "Boldonse", system-ui;
+}
+
+.logotipo{
+    display: flex;
+    align-items: center;
+    width: 100px;
+   
+}
+.logotipo:hover{
+    border-radius: 80px;
+    background-color: #9b5d66;
+    transition: width 0.3s cubic-bezier(.49,.13,.1,.67);
+}
+
+/* cajas */
+
+.envoltorio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cajovich {
+    background-color: rgb(116, 159, 218);
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+.opcion {
+    
+    align-content: center;
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+    background-color: #de1f3c;
+
+}
+
+.opcion a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    color: white;
+   
+}
+
+ /* trans */
+
+.opcion1:hover{
+    width: 98%;
+    background: rgb(222,31,60);
+    background: linear-gradient(90deg, rgba(222,31,60,1) 0%, rgba(240,59,111,1) 65%, rgba(255,127,156,1) 99%);
+    border-radius: 20px;
+}
+
+.opcion2{
+    animation-name: animacionCajita2;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.opcion3 {
+    animation: animacionCaja3 2s infinite alternate;
+
+}
+
+/*** animacionesitas de las cajitas estas de arriba ***/
+
+@keyframes animacionCajita2 {
+    100%{
+        width: 150px;
+        height: 110px;
+    }
+}
+
+@keyframes animacionCaja3{
+    from{
+        width: 100px;
+        background-color: #de1f3c;
+    }
+    to{
+        width: 300px;
+        background-color: #ff5871;
+    }
+}
+
+
+.tarjetas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.caja {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-inline: 4%;
+    margin-block-start: 2%;
+    width: 350px;
+    height: 400px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(255, 179, 179);      
+    transition: all 0.3s cubic-bezier(.49,.13,.1,.67); 
+}
+.caja:hover{
+    transform: scale(110%);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.caja .caja_img{
+    width: 100%;
+    height: 130px;
+    border-radius: 5px;
+}
+
+.caja .caja_titulo{
+    font-family: "Boldonse", system-ui;
+    font-weight: 100;
+    font-size: 15px;
+    
+}
+
+.caja .caja_texto {
+    font-size: 14px;
+    font-family: "DM Serif Text", serif;
+    margin-bottom: 20px;
+}
+
+.caja .caja_boton {
+    width: 50%;
+    border-style: dashed;
+    background-color: #ff5871;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+   
+}
+
+.caja .caja_boton:hover{
+    background-color: rgb(255, 255, 255);
+}
+
+.caja_img,
+.caja_texto,
+.caja_titulo,
+.caja_boton {
+    margin-bottom: 5px;
+}
+
+.pie {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: #f46b82;
+    color: white;
+    font-weight: 500;
+    font-size: 30px;
+    font-family: "Boldonse", system-ui;
+    padding: 10px;
+}
+ /* Cajas con grid */
+
+ .contenedores_grid {
+        height: calc(100vh - 110px);
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "caja1 caja1 caja2 caja3"
+        "caja1 caja1 caja4 caja5"
+        
+ }
+ 
+ .caja1 {
+    display: flex;
+    grid-column: 1/3;
+    grid-row: 1/4;
+    background-color: rgb(225, 100, 100);
+ }
+
+.box {
+    place-items: center;
+    border: 2px solid rgb(0, 0, 0);
+}
+.imagencita{
+    padding-block-start: 20px;
+    padding-inline:20px;
+    height: 350px;
+    width: 100%;
+    border-radius: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+.botoncito{
+    width:80%;
+    height: 100px;
+    border: none;
+    border-radius: 30px;
+    background-color: #ff5871;
+    transition: background-color 1s ease;
+}
+
+.textito{
+    font-weight: bold;
+    font-family: "DM Serif Text", serif;
+    margin-inline: 50px;
+}
+
+.botoncito:hover{
+    background-color: #ee1939;
+    border: solid 1px black;
+    color: white;
+}
+
+.caja2 {
+    background-color: #f46b82;
+    grid-area: caja2;
+}
+
+.caja3 {
+    background: blueviolet;
+    grid-area: caja3;
+}
+
+.caja4 {
+    background-color: aqua;
+    grid-area: caja4;
+}
+
+.caja5 {
+    background-image:url(../img/perrito-nbatpvqy5jur2jhh.jpg) ;
+    grid-area: caja5;
+}
+
+.contenedores_grid > div {
+    display:grid;
+    place-items: center;
+}
+
+/* media queries */
+
+@media screen and (max-width:800px){
+    .textito{
+        margin-inline: 10px;
+    }
+    .imagencita{
+        height: 250px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:480px){
+    .menu {
+        gap: 0;
+    }
+    .logotipo{
+        width: 80px;
+    }
+    .menu li a {
+        margin-inline: 10px;
+        padding: 5px;
+        font-size: 10px;
+    }
+    .contenedores_grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: 
+        "caja1  caja2"
+        "caja3  caja4"
+        "caja5  caja5";
+}
+.caja1{
+    grid-area: caja1;
+}
+.imagencita{
+    padding-block-start: 5px;
+    padding-inline:10px;
+    height: 80px;
+    width: 100%;
+    border-radius: 200px;
+    align-items: center;
+    justify-content: center;
+        }
+        
+.botoncito{
+    width:100%;
+    margin-block: 5px;
+    height: 50px;
+    border: none;
+    border-radius: 30px;
+    background-color: #ff5871;
+    transition: background-color 1s ease;
+        }
+        
+.textito{
+    padding: 10px;
+    font-size: 10px;
+    font-weight: bold;
+    font-family: "DM Serif Text", serif;
+    margin: auto;
+        }
+        
+.botoncito:hover{
+    background-color: #ee1939;
+    border: solid 1px black;
+    color: white;
+        }
+        
+    }
+
+    .text-focus-in{animation:text-focus-in .3s cubic-bezier(.55,.085,.68,.53) both}
+
+
+    @keyframes text-focus-in{0%{filter:blur(12px);opacity:0}100%{filter:blur(0);opacity:1}}
